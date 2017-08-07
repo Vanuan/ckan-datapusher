@@ -17,6 +17,6 @@ RUN pip install gunicorn
 ENV JOB_CONFIG='/datapusher/src/datapusher/deployment/datapusher_settings.py'
 
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["gunicorn", "-b 127.0.0.1:8800", "wsgi:app"]
+CMD ["gunicorn", "-b 0.0.0.0:8800", "wsgi:app"]
 
 EXPOSE 8800
