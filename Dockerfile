@@ -12,7 +12,7 @@ RUN apk add --update --no-cache \
 
 RUN git clone --depth 1 -b 0.0.12 https://github.com/ckan/datapusher.git /datapusher && cd /datapusher && pip install -r requirements.txt && python setup.py develop
 
-RUN pip install gunicorn
+RUN pip install gunicorn psycopg2
 
 ENV JOB_CONFIG='/datapusher/src/datapusher/deployment/datapusher_settings.py'
 
