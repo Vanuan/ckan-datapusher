@@ -8,6 +8,7 @@ RUN apk add --update --no-cache \
         libffi-dev \
         openssl-dev \
         build-base \
+        libpq \
         git
 
 RUN git clone --depth 1 -b 0.0.12 https://github.com/ckan/datapusher.git /datapusher && cd /datapusher && pip install -r requirements.txt && python setup.py develop
