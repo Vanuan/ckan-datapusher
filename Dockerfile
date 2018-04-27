@@ -12,7 +12,7 @@ RUN apk add --update --no-cache \
         postgresql-dev \
         git
 
-RUN git clone --depth 1 -b 0.0.12 https://github.com/ckan/datapusher.git /datapusher && cd /datapusher && pip install -r requirements.txt && python setup.py develop
+RUN git clone --depth 1 -b 0.0.13 https://github.com/ckan/datapusher.git /datapusher && cd /datapusher && pip install -r requirements.txt && python setup.py develop
 
 RUN pip install gunicorn psycopg2
 
